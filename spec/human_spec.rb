@@ -7,4 +7,10 @@ RSpec.describe Human do
 
     expect(human).to be_an_instance_of(Human)
   end
+
+  it "can get user input" do
+    human = Human.new
+
+    expect(human.input).to eq("A")
+  end
 end
