@@ -36,7 +36,7 @@ class Computer_player
   #   end
   #   print @board
   # end
-
+  end
 
 end
 
