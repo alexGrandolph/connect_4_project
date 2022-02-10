@@ -14,7 +14,7 @@ RSpec.describe Human do
     expect(human.input).to eq("A")
   end
 
-  it "can place a piece" do
+  xit "can place a piece" do
     human = Human.new
     human.place_piece
 
