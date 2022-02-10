@@ -19,4 +19,22 @@ RSpec.describe Board do
     expect(board.rows.cells).to eq([A1, B1, C1, D1])
   end
 
+  it "has multiple rows" do
+    A1 = Cell.new("A", 1)
+    B1 = Cell.new("B", 1)
+    A2 = Cell.new("A", 2)
+    B2 = Cell.new("B", 2)
+    cells_1 = [A1, B1]
+    cells_2 = [A2, B2]
+
+    row_1 = Row.new(cells_1)
+    row_2 = Row.new(cells_2)
+    rows = [row_1, row_2]
+
+    board = Board.new(rows)
+
+    expect(board.rows[0].cells).to eq([A1, B1])
+    expect(board.rows[1].cells).to eq([A2, B2])
+  end
+
 end
